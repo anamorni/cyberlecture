@@ -1,0 +1,47 @@
+#define PI 3.14
+double area(double r);
+double around(double r);
+int main() {
+	double r;
+	printf("반지름입력>>");
+	r = scanf("%lf", &r);
+	double result = area(r);
+	printf("원면적:%lf\n", result);
+	result = around(r);
+	printf("원의 둘레:%lf", result);
+
+	return 0;
+}
+double area(double r) {
+	return PI * r * r;
+}
+double around(double r) {
+	return 2 * PI * r;
+}
+
+----------------------------------------
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#define ABS(x) ((x)<0? (-x):(x))
+
+void main() {
+	int n; 
+	scanf("%d", &n);
+	printf("%d\n", ABS(n));
+
+}
+-------------------------
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#define ABS(x) ((x)<0? (-x):(x))
+#define SQUARE(x) ((x)* (x))
+void main() {
+	int x = 2;
+	printf("%d\n", SQUARE(x));
+	printf("%d\n", SQUARE(3));
+	printf("%d\n", SQUARE(1.2));
+	printf("%d\n", SQUARE(x+3));
+	printf("%d\n", 100/SQUARE(x));
+	printf("%d\n", SQUARE(++x));
+------------------------------------
+
